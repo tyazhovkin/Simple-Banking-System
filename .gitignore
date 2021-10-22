@@ -1,0 +1,47 @@
+### Java ###
+# Compiled class file
+*.class
+
+### Gradle ###
+.gradle
+build/
+
+# IntelliJ
+out/
+.idea
+*.iml
+*.ipr
+*.iws
+
+### NetBeans ###
+**/nbproject/private/
+**/nbproject/Makefile-*.mk
+**/nbproject/Package-*.bash
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+### Eclipse ###
+
+.settings/
+bin/
+tmp/
+.metadata
+.classpath
+.project
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.loadpath
+.factorypath
+
+# Log file
+*.log
+
+# Database
+*.s3db
+*.db

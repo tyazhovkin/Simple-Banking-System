@@ -1,0 +1,41 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group 'org.hyperskill'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = JavaVersion.VERSION_11
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+    implementation group: 'org.xerial', name: 'sqlite-jdbc', version: '3.8.11.2'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+application {
+    mainClass.set('org.hyperskill.app.Main')
+}
+
+run {
+    standardInput = System.in
+    setArgsString("-fileName database.db")
+}
+
+compileJava.options.encoding = 'utf-8'
+tasks.withType(JavaCompile) {
+    options.encoding = 'utf-8'
+}
+
+wrapper {
+    gradleVersion = '7.2'
+}
